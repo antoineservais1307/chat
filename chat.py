@@ -54,3 +54,4 @@ if user_question:
     # Now show the "Google it" GIF with custom styling for the answer
     st.markdown('<div class="answer">Ah, I\'ve got it! Here\'s your answer:</div>', unsafe_allow_html=True)
     st.image("https://media.giphy.com/media/rcmg2ogSBedUs/giphy.gif?cid=790b7611n6r4fdsfyntzlxs7ylux19g2fpj7i0wjciwhum8k&ep=v1_gifs_search&rid=giphy.gif&ct=g", caption="Google it", use_column_width=True)
+    st.write("Let the others be pranked too! 😂")
