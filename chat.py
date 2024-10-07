@@ -36,8 +36,11 @@ st.markdown('<div class="header">Becode Chatbot</div>', unsafe_allow_html=True)
 # Ask a question to the chatbot with custom styling
 user_question = st.text_input("Ask me anything:")
 
-# Logic to respond with a "Google it" GIF after some "thinking" time
-if user_question:
+# Create a submit button for user interaction
+submit_button = st.button("Submit")
+
+# Logic to respond with a Rickroll GIF and the image of the person after some "thinking" time
+if submit_button and user_question:
     st.markdown('<div class="question">Hmm... let me think about that...</div>', unsafe_allow_html=True)
     
     # Create a placeholder for the thinking animation (simulated by text here)
@@ -51,7 +54,9 @@ if user_question:
     # Clear the placeholder
     thinking_placeholder.empty()
     
-    # Now show the "Google it" GIF with custom styling for the answer
+    # Directly show the Rickroll GIF with custom styling for the answer
     st.markdown('<div class="answer">Ah, I\'ve got it! Here\'s your answer:</div>', unsafe_allow_html=True)
-    st.image("https://media.giphy.com/media/rcmg2ogSBedUs/giphy.gif?cid=790b7611n6r4fdsfyntzlxs7ylux19g2fpj7i0wjciwhum8k&ep=v1_gifs_search&rid=giphy.gif&ct=g", caption="Google it", use_column_width=True)
-    st.write("Let the others be pranked too! 😂")
+    
+    # Display the image of the person (replace 'your_image.png' with the actual file name)
+    st.image('background.jpg', caption='Surprise!', use_column_width=True)  # Ensure the file is in the same directory
+
